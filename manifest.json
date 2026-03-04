@@ -1,26 +1,26 @@
 {
   "manifest_version": 3,
-  "name": "Scam Guard",
-  "version": "1.1.0",
-  "description": "Detects phishing/scams in Gmail and WhatsApp Web with warnings.",
+  "name": "Scam Guard for WhatsApp Web",
+  "version": "0.1.0",
+  "description": "Highlights potentially scammy messages in WhatsApp Web and shows safety advice.",
   "permissions": [
     "scripting",
     "activeTab"
   ],
   "host_permissions": [
-    "https://mail.google.com/*",
     "https://web.whatsapp.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://mail.google.com/*"],
-      "js": ["gmail-content.js"],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": ["https://web.whatsapp.com/*"],
-      "js": ["whatsapp-content.js"],
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "whatsapp-content.js"
+      ],
       "run_at": "document_idle"
     }
   ]
 }
+
+
